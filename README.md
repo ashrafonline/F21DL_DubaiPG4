@@ -1,4 +1,4 @@
-# F21DL_DubaiPG4 Project
+# F21DL_DubaiPG4 Project - Heriot Watt University - Dubai 2024-2025
 
 ## Project Overview
 
