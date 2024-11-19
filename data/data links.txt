@@ -1,0 +1,7 @@
+Album covers :
+https://www.kaggle.com/datasets/michaeljkerr/20k-album-covers-within-20-genres
+
+Spotify Tracks :
+https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db
+
+
