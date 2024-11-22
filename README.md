@@ -1,41 +1,62 @@
-# F21DL_DubaiPG4 Project - Heriot Watt University - Dubai 2024-2025
+# F21DL_DubaiPG4 - Music Analytics Using Machine Learning
 
-## Project Overview
+## Overview
+This project explores the use of machine learning techniques for analyzing, predicting, and clustering music data. It aims to uncover insights into song popularity, genre classification, and playlist generation. By leveraging advanced models, the project addresses challenges in music analytics and provides data-driven solutions to enhance the music experience.
 
-Project Description Goes Here
+## Objectives
+* Understand key factors influencing song popularity.
+* Predict song popularity using regression models.
+* Classify songs into genres based on album cover images.
+* Cluster songs with audio features to identify patterns and generate playlists.
 
-## Repository Structure
+## Datasets
+### Spotify Tracks Dataset:
+__Features:__ Genre, Popularity, Acousticness, Danceability, Duration, Energy, Instrumentalness, Key, Liveness, Loudness, Mode, Speechiness, Tempo, Time Signature, Valence.
+### Album Covers Dataset:
+__Features:__ Album cover images organized by genre.
 
-- **data/**:
-  - `raw/`: Contains unprocessed datasets. Data in this folder should remain untouched.
-  - `processed/`: Cleaned and processed data that is ready for modeling.
+## Key Features
 
-- **notebooks/**:
-  - Jupyter notebooks for exploratory data analysis, model development, and results demonstration.
-  - `model_development.ipynb`: Experiments with different models and hyperparameter tuning.
-  - `results.ipynb`: Final presentation of results and conclusions.
+**Regression Analysis:** Prediction of song popularity using models such as Decision Trees, Random Forest, and Gradient Boosting.
 
-- **src/**:
-  - Core source code for the project, organized into subdirectories:
-    - `data/`: Scripts to clean and preprocess datasets.
-    - `features/`: Scripts for feature extraction and transformation.
-    - `models/`: Scripts to train, predict, and evaluate machine learning models.
-    - `visualization/`: Scripts to generate charts, plots, and visual representations of the data and model results.
+**Clustering:**  Grouping songs based on audio features using K-Means and DBSCAN for playlist generation.
 
-- **models/**:
-  - Pre-trained or serialized models, such as `.pkl` or `.h5` files.
+**Classification:** Genre prediction from album covers using Convolutional Neural Networks (CNNs) with pre-trained models like MobileNetV2.
 
-- **reports/**:
-  - Any generated reports, analysis, and figures. This folder contains deliverables like presentations, PDFs, or images of results.
+## Results
 
-### Setup Instructions
+### Regression:
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ashrafonline/F21DL_DubaiPG4.git
-   cd F21DL_DubaiPG4
-2. **Push changes**
-   ```bash
-   git add .
-   git commit -m "Describe the push you made"
-   git push origin main
+Best Model: Random Forest with optimized parameters.
+* Mean Squared Error (MSE): `0.97`
+* Root Mean Squared Error (RMSE): `0.99`
+* R² Score: `0.997`
+
+### Clustering:
+K-Means: Best-performing clustering method with a silhouette score of `0.597`.
+
+### Classification:
+
+* Initial CNN accuracy: `16.45%.`
+* Improved to `95.22%` for binary classification (Classical vs. Non-Classical) using MobileNetV2.
+
+## Repository Structure and Navigation
+
+The repository is organized into distinct folders and files to streamline access to data, models, experiments, and results. Below is a step-by-step guide to help navigate the project:
+
+1.Data :  
+`data/` : `data links.txt`: Links to the external datasets (Spotify Tracks, Album Covers).
+
+2. Notebooks: 
+
+`notebooks/`
+
+* `imagesDSVisualization.ipynb`: Visualizes album cover datasets to analyze brightness, tones, and patterns.
+* `AlbumCovers_Tensorflow.ipynb`: Implements classification of album covers using 
+convolutional neural networks (CNNs) and TensorFlow.
+* `Spotify_Audio_features_Clustering.ipynb`: Performs clustering of audio features to identify song patterns and generate playlists.(the entire notebook can only be seen if you access colab)
+* `Decision_Tree_Regressor.ipynb`: Develops and evaluates a decision tree regression model to predict song popularity.
+* `data_mining_linear_regression.ipynb`: Implements linear regression for predicting popularity based on key features.
+* `rfr_predictionnn.ipynb`:* Implements Random Forest Regression with hyperparameter tuning.
+
+4. Reports :  `reports/`:  final report
